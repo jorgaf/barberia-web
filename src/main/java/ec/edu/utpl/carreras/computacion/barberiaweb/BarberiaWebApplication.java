@@ -1,4 +1,4 @@
-package ec.edu.utpl.carreras.ti.barberia_web;
+package ec.edu.utpl.carreras.computacion.barberiaweb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

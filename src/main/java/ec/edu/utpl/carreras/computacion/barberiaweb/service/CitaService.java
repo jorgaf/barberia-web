@@ -1,7 +1,7 @@
-package ec.edu.utpl.carreras.ti.barberia_web.service;
+package ec.edu.utpl.carreras.computacion.barberiaweb.service;
 
-import ec.edu.utpl.carreras.ti.barberia_web.model.Cita;
-import ec.edu.utpl.carreras.ti.barberia_web.repository.CitaRepository;
+import ec.edu.utpl.carreras.computacion.barberiaweb.model.Cita;
+import ec.edu.utpl.carreras.computacion.barberiaweb.repository.CitaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

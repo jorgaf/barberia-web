@@ -1,6 +1,6 @@
-package ec.edu.utpl.carreras.ti.barberia_web.controller;
+package ec.edu.utpl.carreras.computacion.barberiaweb.controller;
 
-import ec.edu.utpl.carreras.ti.barberia_web.service.CitaService;
+import ec.edu.utpl.carreras.computacion.barberiaweb.service.CitaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,11 +1,14 @@
-package ec.edu.utpl.carreras.ti.barberia_web.model;
+package ec.edu.utpl.carreras.computacion.barberiaweb.model;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="barbero")
-@NamedQuery(name="Barbero.getById", query = "SELECT b FROM Barbero b WHERE b.id =:id_barbero")
-public class Barbero {
+@Table(name = "cliente")
+@NamedQueries({
+        @NamedQuery(name = "Cliente.getById", query = "SELECT c FROM Cliente c WHERE c.id = :id_cliente")
+})
+public class Cliente {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -14,10 +17,9 @@ public class Barbero {
     private String telefono;
     private String email;
 
-    public Barbero() {
-    }
+    public Cliente(){}
 
-    public Barbero(String nombre, String apellido, String telefono, String email) {
+    public Cliente(String nombre, String apellido, String telefono, String email) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;

@@ -1,4 +1,4 @@
-package ec.edu.utpl.carreras.ti.barberia_web.model;
+package ec.edu.utpl.carreras.computacion.barberiaweb.model;
 
 import jakarta.persistence.*;
 

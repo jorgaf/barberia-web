@@ -8,7 +8,7 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>ec.edu.utpl.carreras.ti</groupId>
+	<groupId>ec.edu.utpl.carreras.computacion</groupId>
 	<artifactId>barberia-web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>barberia-web</name>
