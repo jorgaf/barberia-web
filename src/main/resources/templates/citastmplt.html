@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://thymeleaf.org">
+    <head>
+        <title>Citas</title>
+    </head>
+    <body>
+        <div th:fragment>
+            <h2>Citas</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                    <th>Barbero</th>
+                    <th>Cliente</th>
+                    <th>Servicio</th>
+                    <th>Estado</th>
+                    <th>Notas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="cita:${citas}">
+                        <td th:text="|${cita.barbero.nombre} ${cita.barbero.apellido}|"></td>
+                        <td th:text="|${cita.cliente.nombre} ${cita.cliente.apellido}|"></td>
+                        <td th:text="${cita.servicio.nombre}"></td>
+                        <td th:text="${cita.estado}"></td>
+                        <td th:text="${cita.notas}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
