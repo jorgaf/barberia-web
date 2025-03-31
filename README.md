@@ -23,3 +23,19 @@ Una vez que ejecute el método main (src/main/java/ec/edu/utpl/carreras/computac
 La funcionalidad es básica, muestra únicamente una tabla con las citas.
 
 ¿Cómo se puede modificar la aplicación para que la interfaz mejore? Proponga algunas alternativas.
+
+Respuesta:
+
+Una posible respuesta propuesta por usted, fue el uso de hojas de estilo (css) para mejorar la presentación.
+
+Efectivamente está en lo correcto, una hoja de estilo es el mejor mecanismo para lograr mejorar la presentación, pero, aprender a crear un css puede ser una tarea bastante compleja considerando, por ejemplo, la existencia de múltiples navegadores y cada uno con diferentes versiones. Intentar que un estilo funcione en todos ellos es un reto.
+
+Una forma de evitar este reto es usar una de las tantas hojas de estilos que están disponibles de forma gratuita. Aquí se usóa [tailwindcss](https://tailwindcss.com) que es muy potente y permite personalizar muchas de las características de los elementos de html.
+
+En este caso, revise el archivo [citastmplt.html](src/main/resources/templates/citastmplt.html) y observarán que se han agregado varios elementos para poder usar esa hoja de estilos.
+
+Es momentos de algunas preguntas:
+
+- ¿Qué pasaría si se agrega una nueva cita
+- ¿Qué debería hacer el usuario de nuestra aplicación?
+- ¿Qué se puede implementar buscando la automatización?

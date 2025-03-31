@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://thymeleaf.org">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <title>Citas</title>
     </head>
     <body>
-        <div th:fragment>
-            <h2>Citas</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                    <th>Barbero</th>
-                    <th>Cliente</th>
-                    <th>Servicio</th>
-                    <th>Estado</th>
-                    <th>Notas</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="cita:${citas}">
-                        <td th:text="|${cita.barbero.nombre} ${cita.barbero.apellido}|"></td>
-                        <td th:text="|${cita.cliente.nombre} ${cita.cliente.apellido}|"></td>
-                        <td th:text="${cita.servicio.nombre}"></td>
-                        <td th:text="${cita.estado}"></td>
-                        <td th:text="${cita.notas}"></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="container mx-auto px-4">
+            <div th:fragment>
+                <h1 class="text-3xl font-bold underline text-clifford">Citas</h1>
+                <br/>
+                <table class="w-full text-left table-auto min-w-max text-slate-800">
+                    <thead>
+                        <tr class="text-slate-500 border-b border-slate-300 bg-slate-50">
+                            <th class="p-4">Barbero</th>
+                            <th class="p-4">Cliente</th>
+                            <th class="p-4">Servicio</th>
+                            <th class="p-4">Estado</th>
+                            <th class="p-4">Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-slate-50" th:each="cita:${citas}">
+                            <td class="p-4" th:text="|${cita.barbero.nombre} ${cita.barbero.apellido}|"></td>
+                            <td class="p-4" th:text="|${cita.cliente.nombre} ${cita.cliente.apellido}|"></td>
+                            <td class="p-4" th:text="${cita.servicio.nombre}"></td>
+                            <td class="p-4" th:text="${cita.estado}"></td>
+                            <td class="p-4" th:text="${cita.notas}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </body>
 </html>
