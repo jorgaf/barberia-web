@@ -23,4 +23,11 @@ public class CitaController {
         model.addAttribute("citas", citas);
         return "citastmplt";
     }
+
+    @GetMapping("/update")
+    String updateTable(Model model) {
+        var citas = citaService.getAllCitas();
+        model.addAttribute("citas", citas);
+        return "tabletmplt :: citas";
+    }
 }

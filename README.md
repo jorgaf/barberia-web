@@ -1,6 +1,6 @@
 # Barbería Web
 
-Hasta el momento ha trabajo con varias vresiones de la gestión de citas de una barbería.
+Hasta el momento ha trabajado con varias vresiones de la gestión de citas de una barbería.
 
 Posiblemente ahora mismo se esté preguntando si todo lo aprendido, en realidad, le permite construir algún tipo de aplicación de uso común hoy en día como las aplicaciones Web.
 
@@ -36,6 +36,24 @@ En este caso, revise el archivo [citastmplt.html](src/main/resources/templates/c
 
 Es momentos de algunas preguntas:
 
-- ¿Qué pasaría si se agrega una nueva cita
+- ¿Qué pasaría si se agrega una nueva cita?
 - ¿Qué debería hacer el usuario de nuestra aplicación?
 - ¿Qué se puede implementar buscando la automatización?
+
+Respuestas:
+
+Las respuestas a las pregunta son:
+
+- Si se agrega una nueva cita, el listado que se muestra seguirá presentando los mismos datos.
+- El usuario debería refrescar la página, es decir, volver a cargarla.
+- Se debe buscar una forma para refrescar automáticamente la página.
+
+La respuesta a la tercer pregunta se debe ampliar, si bien existen diferentes formas de hacer esto, aquí se usará una librería denominada [htmx](https://htmx.org), así puede conocer una tendencia dentro del desarrollo Web.
+
+htmx es una librería es una librería que permite acceder a las funciones modernas del navegador directamente desde HTML, en lugar de usar javascript. Para trabajar con htmx se debe agregar el script (ver [aquí](src/main/resources/templates/citastmplt.html#L7)).
+
+También se dividió el archivo [citastmplt.html](src/main/resources/templates/citastmplt.html) en dos partes, la primera con la información general, mientras que la segunda [tabletmplt.html](src/main/resources/templates/tabletmplt.html), esta división se hizo ya que no se actualizará toda la página, sino sólo un fragmento, la tabla.
+
+Para actualizar únicamente la tabla se usará htmx y sus atributos, ver [tabletmplt.html](src/main/resources/templates/tabletmplt.html#L12). Esos atributos señalan que se invocará a la URL /citas/update, que el código que recibirá se ubicar reemplazando al elemento con id: table-citas y todo esto se hará una vez que se ha cargado la tabla, eso sí, demorando la llamada 60 segundos.
+
+Por ahora, la aplicación quedá hasta ahí.

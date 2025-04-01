@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://thymeleaf.org">
+    <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+             <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                         <title>Document</title>
+</head>
+<body>
+    <div id="table-citas" th:fragment="citas">
+    <table class="w-full text-left table-auto min-w-max text-slate-800"
+           hx-get="/citas/update"
+           hx-target="#table-citas"
+           hx-swap="outerHTML"
+           hx-trigger="load delay:60s">
+        <thead>
+            <tr class="text-slate-500 border-b border-slate-300 bg-slate-50">
+                <th class="p-4">Barbero</th>
+                <th class="p-4">Cliente</th>
+                <th class="p-4">Servicio</th>
+                <th class="p-4">Estado</th>
+                <th class="p-4">Notas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="hover:bg-slate-50" th:each="cita:${citas}">
+                <td class="p-4" th:text="|${cita.barbero.nombre} ${cita.barbero.apellido}|"></td>
+                <td class="p-4" th:text="|${cita.cliente.nombre} ${cita.cliente.apellido}|"></td>
+                <td class="p-4" th:text="${cita.servicio.nombre}"></td>
+                <td class="p-4" th:text="${cita.estado}"></td>
+                <td class="p-4" th:text="${cita.notas}"></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
